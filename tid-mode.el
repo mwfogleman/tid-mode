@@ -6,7 +6,6 @@
 (defun tid-time ()
   "If called in a tiddler file, this function updates the metadata to
   reflect the modification time."
-  (interactive)
   (when (tid-p)
       (save-excursion
 	(goto-char (point-min))
