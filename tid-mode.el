@@ -1,10 +1,12 @@
+(defun tid-p ()
+  (and
+   (> (length (buffer-file-name)) 4)
+   (string-equal (substring (buffer-file-name) -4) ".tid")))
+(defun tid-time ()
   "If called in a tiddler file, this function updates the metadata to
   reflect the modification time."
   (interactive)
-  (when
-      (and
-       (> (length (buffer-file-name)) 4)
-       (string-equal (substring (buffer-file-name) -4) ".tid"))
+  (when (tid-p)
       (save-excursion
 	(goto-char (point-min))
 	(search-forward "modified: ")
