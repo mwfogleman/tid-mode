@@ -17,6 +17,7 @@
 
 (define-derived-mode tid-mode text-mode "TW"
    "A major mode for editing TiddlyWiki5 (.tid) files."
+   (setq tid-mode-hook nil)
    (add-hook 'tid-mode-hook 'turn-on-orgstruct)
    (add-hook 'tid-mode-hook 'subword-mode))
 
