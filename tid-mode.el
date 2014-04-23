@@ -14,3 +14,9 @@
 	(kill-line)
 	(insert (format-time-string "modified: %Y%m%d%H%M%S%3N")))))
 
+(define-derived-mode tid-mode text-mode "TW"
+   "A major mode for editing TiddlyWiki5 (.tid) files."
+   (add-hook 'tid-mode-hook 'turn-on-orgstruct)
+   (add-hook 'tid-mode-hook 'subword-mode))
+(add-to-list 'auto-mode-alist '("\\.tid\\'" . tid-mode))
+(provide 'tid-mode)
