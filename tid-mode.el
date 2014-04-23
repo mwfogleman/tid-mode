@@ -15,10 +15,13 @@
 	(kill-line)
 	(insert (format-time-string "modified: %Y%m%d%H%M%S%3N")))))
 
+(defun tid-save ()
+  "If a .tid file is saved, call tid-time to update the metadata.")
 (define-derived-mode tid-mode text-mode "TW"
    "A major mode for editing TiddlyWiki5 (.tid) files."
    (add-hook 'tid-mode-hook 'turn-on-orgstruct)
-   (add-hook 'tid-mode-hook 'subword-mode))
+   (add-hook 'tid-mode-hook 'subword-mode)
+   (add-hook 'tid-mode-hook 'tid-save))
 
 (add-to-list 'auto-mode-alist '("\\.tid\\'" . tid-mode))
 
