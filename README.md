@@ -4,9 +4,7 @@ tid-mode is an Emacs major mode for editing TiddlyWiki5 .tid files.
 
 * derived from text-mode
 * opens automatically in .tid files
-* uses some useful minor modes:
-** org-struct mode
-** subword-mode 
+* uses the orgstruct and subword minor modes
 * updates the modified times when you save a .tid file
 
 # Usage
