@@ -22,6 +22,7 @@ While tid-mode.el's basic functionality accomplishes everything I
 originally desired from a TiddlyWiki mode, it could absolutely do
 more. Here are some ideas that could be implemented in the future:
 
+* Add link functions.
 * Add helper function for locating source directory of wiki, and
   setting it to a variable.
 * Add a function for creating a .tid file from within Emacs.
