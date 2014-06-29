@@ -22,6 +22,7 @@
 	(insert (format-time-string "modified: %Y%m%d%H%M%S%3N")))))
 
 (defun tid-save ()
+  "Allow `tid-mode' to run the function `tid-time' when contents are written."
   (add-hook 'write-contents-hooks 'tid-time))
 
 (define-derived-mode tid-mode text-mode "TW"
