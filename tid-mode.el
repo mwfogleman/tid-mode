@@ -1,3 +1,10 @@
+;;; tid-mode.el --- tid-mode is an Emacs major mode for editing TiddlyWiki .tid files.
+
+;;; Commentary:
+;; Hosted at https://github.com/mwfogleman/tid-mode.
+
+;;; Code:
+
 (defun tid-p ()
   "Checks whether or not a buffer's file is a .tid file."
   (and
@@ -28,3 +35,4 @@
 
 (provide 'tid-mode)
 
+;;; tid-mode.el ends here
