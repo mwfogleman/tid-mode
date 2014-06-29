@@ -6,13 +6,13 @@
 ;;; Code:
 
 (defun tid-p ()
-  "Checks whether or not a buffer's file is a .tid file."
+  "Check whether or not a buffer's file is a .tid file."
   (and
    (> (length (buffer-file-name)) 4)
    (string-equal (substring (buffer-file-name) -4) ".tid")))
 
 (defun tid-time ()
-  "Updates .tid metadata to reflect the modification time."
+  "Update .tid metadata to reflect the modification time."
   (when (tid-p)
       (save-excursion
 	(goto-char (point-min))
